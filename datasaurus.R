@@ -23,6 +23,8 @@ facet_plot <- ggplot(datasaurus, aes(x=x, y=y, colour=dataset))+
   theme(legend.position = "none")+
   facet_wrap(~dataset, ncol=3)
 
+facet_plot
+
 # The colours are ugly, can we change them?
 # The Brewer palettes are usually better, but they only have 8-12 colours
 
@@ -83,3 +85,6 @@ datasaurus %>%
 # We can look at the data descriptive using the describeBy function from the psych package
 
 describeBy(datasaurus, group = "dataset")
+
+# Additional examples from Twitter:
+# https://github.com/jack-davison/TidyTuesday
